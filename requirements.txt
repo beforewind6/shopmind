@@ -1,0 +1,40 @@
+# ShopMind 依赖清单
+# 电商智能客服 Agent 系统
+
+# Web 框架
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# UI
+streamlit>=1.28.0
+
+# 核心
+numpy>=1.24.0
+pyyaml>=6.0
+pandas>=2.0.0
+
+# 中文分词
+jieba>=0.42.0
+
+# BM25
+rank-bm25>=0.2.0
+
+# 评估
+# rouge>=1.0.0
+# bert-score>=0.3.0
+
+# 可选: LangChain
+# langchain>=0.1.0
+# langchain-community>=0.1.0
+
+# 可选: Ollama
+# langchain-ollama
+
+# 可选: Embedding
+# sentence-transformers>=2.2.0
+
+# 可选: ChromaDB
+# chromadb>=0.4.0
+
+# 可选: MySQL
+# pymysql>=1.1.0

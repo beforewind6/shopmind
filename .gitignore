@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# 向量数据库
+data/vector_db/
+*.npy
+
+# 数据库
+data/db/*.db
+data/db/*.db-journal
+data/db/*.db-wal
+data/db/*.db-shm
+
+# 日志
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# 环境变量
+.env

@@ -1,0 +1,56 @@
+# ShopMind 统一配置文件
+# 电商智能客服 Agent 系统
+
+project:
+  name: "ShopMind"
+  version: "1.0"
+  description: "基于 ReAct Agent + RAG 的智能客服系统"
+
+llm:
+  provider: "ollama"
+  model: "qwen-plus"
+  temperature: 0.3
+  top_p: 0.9
+  max_tokens: 2048
+  ollama:
+    base_url: "http://localhost:11434"
+
+embedding:
+  model: "paraphrase-multilingual-MiniLM-L12-v2"
+  dimension: 384
+  device: "cpu"
+
+vector_store:
+  backend: "numpy"
+  persist_dir: "./data/vector_db"
+  collection_name: "ecommerce_knowledge"
+
+database:
+  type: "sqlite"
+  sqlite:
+    path: "./data/db/shopmind.db"
+
+rag:
+  chunk_size: 256
+  chunk_overlap: 64
+  top_k: 3
+  similarity_threshold: 0.35
+
+agent:
+  max_iterations: 5
+  max_consecutive_failures: 3
+  timeout: 30
+
+api:
+  host: "0.0.0.0"
+  port: 8002
+  debug: true
+
+ui:
+  streamlit_port: 8501
+  gradio_port: 8004
+
+logging:
+  level: "INFO"
+  file: "./logs/app.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
